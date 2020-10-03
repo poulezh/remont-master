@@ -1,0 +1,100 @@
+.pages
+    width: 100%
+    margin: 0 auto
+    padding: 40px 0
+    // .pages__inner
+
+    &__inner
+        width: 100%
+        margin: 0 auto
+    // .pages__title
+
+    &__title
+        text-transform: uppercase
+        @include OswaldRegular
+        margin-bottom: 20px
+    // .pages__text
+
+    &__text
+        margin-bottom: 40px
+    // .pages__citate
+
+    &__citate
+        margin-bottom: 40px
+        font-size: 24px
+        padding-left: 60px
+        width: 100%
+        max-width: 600px
+        position: relative
+        &::after
+            position: absolute
+            content: '\201C'
+            font-size: 90px
+            color: $accent-color
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+    // .pages__citate-text
+
+    &__citate-text
+
+    // .pages__row
+
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @media only screen and (max-width: 768px)
+            flex-direction: column
+
+    // .pages__column
+
+    &__column + &__column
+        margin-left: 20px
+        @media only screen and (max-width: 768px)
+            margin-left: 0
+            margin-top: 20px
+    // .pages__column-title
+
+    &__column-title
+        //text-transform: uppercase
+        @include OswaldRegular
+        font-size: 28px
+        margin-bottom: 20px
+    // .pages__list
+
+    &__list
+        list-style: none
+        margin-bottom: 20px
+    // .pages__list-item
+
+    &__list-item
+        position: relative
+        &::after
+            content: ''
+            height: 8px
+            width: 8px
+            background-color: $accent-color
+            border-radius: 50%
+            position: absolute
+            left: -15px
+            top: 50%
+            transform: translateY(-50%)
+
+
+    &__list-item + &__list-item
+        margin-top: 10px
+    // .pages__btn
+    @media only screen and (max-width: 768px)
+        &__btn
+            display: inline-block
+            margin: 0 auto
+            text-align: center
+    // .pages__img
+
+    &__img
+        width: 100%
+        min-width: 450px
+        @media only screen and (max-width: 480px)
+            min-width: 250px
+

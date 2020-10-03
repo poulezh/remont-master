@@ -1,0 +1,49 @@
+.capture
+    width: 100%
+    margin: 0 auto
+    height: 512px
+    position: relative
+    overflow-x: hidden
+    overflow-y: auto
+    perspective: 1px
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    color: #ffffff
+    background-color: #000000
+    // .capture__inner
+
+    &__inner
+        position: relative
+        z-index: 2
+    // .capture__title
+
+    &__title
+        margin-bottom: 20px
+        @include OswaldRegular
+        text-transform: uppercase
+
+        font-size: 42px
+        @media only screen and (max-width: 480px)
+            font-size: 32px
+
+    // .capture__text
+
+    &__text
+        margin-bottom: 40px
+    // .capture__btn
+
+    &__btn
+
+    // .capture__img
+
+    &__img
+
+        position: fixed
+        z-index: 1
+        opacity: 50%
+        object-fit: cover
+        width: 100%
+        height: 100%
+        object-position: center center

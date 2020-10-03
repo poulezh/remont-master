@@ -1,0 +1,120 @@
+.price
+    width: 100%
+    margin: 0 auto
+    padding: 60px 0
+    background-color: $backgroung-light
+    // .price__inner
+
+    &__inner
+        width: 100%
+        margin: 0 auto
+    // .price__row
+
+    &__row
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 20px
+        @media only screen and (max-width: 768px)
+            grid-template-columns: 1fr
+
+
+    // .price__item
+
+    &__item
+        padding: 70px 15px 70px
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17)
+        border-top-left-radius: 8px
+        border-top-right-radius: 8px
+        background-color: #fff
+        position: relative
+    // .price__suptitle
+
+    &__suptitle
+        text-align: center
+        margin-bottom: 15px
+        @include OswaldRegular
+        font-size: 24px
+        text-transform: uppercase
+    // .price__price
+
+    &__price
+        text-align: center
+        margin-bottom: 15px
+    // .price__numb
+
+    &__numb
+        font-size: 48px
+        @include OswaldRegular
+        color: $accent-color
+    // .price__subtitle
+
+    &__subtitle
+        @include OswaldRegular
+        margin-bottom: 20px
+        text-align: center
+
+    &__line
+        opacity: 20%
+
+    // .price__list
+
+    &__list
+        list-style: none
+        margin-top: 20px
+        margin-bottom: 20px
+
+        padding-left: 50px
+    // .price__li
+
+    &__li
+        position: relative
+        &::after
+            position: absolute
+            content: '\2714'
+            color: $accent-color
+            left: -25px
+            font-size: 20px
+            top: 50%
+            transform: translateY(-50%)
+
+    &__li + &__li
+        margin-top: 15px
+
+    // .price__btn
+
+    &__btn
+        position: absolute
+        width: 100%
+        left: 0
+        border: none
+        background-color: #f7f7f7
+        bottom: -5px
+        border-bottom-left-radius: 8px
+        border-bottom-right-radius: 8px
+        padding: 20px 33px 18px
+        text-transform: uppercase
+        @include OswaldRegular
+        font-size: 16px
+        text-decoration: none
+        text-align: center
+        color: #151515
+        transition: $transition
+        &:hover
+            background-color: $button-bg
+            color: #ffffff
+        &--accent
+            background-color: $accent-color
+
+
+    // .price__popular
+    &__popular
+        position: absolute
+        top: 15px
+        right: 15px
+        background-color: $button-bg
+        color: #fff
+        text-transform: uppercase
+        @include OswaldRegular
+        font-size: 12px
+        padding: 4px 8px
+        border-radius: 6px

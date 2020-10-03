@@ -1,0 +1,80 @@
+.how
+    width: 100%
+    margin: 0 auto
+    padding: 100px 0 50px
+    // .how__inner
+
+    &__inner
+        width: 100%
+        margin: 0 auto
+
+    // .how__row
+
+    &__row
+        display: flex
+        justify-content: space-between
+        @media only screen and (max-width: 768px)
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 20px
+            justify-content: center
+        @media only screen and (max-width: 768px)
+            grid-template-columns: 1fr
+
+    // .how__item
+
+    &__item
+        padding: 40px 30px
+        width: 100%
+        max-width: 320px
+        display: inline-block
+        position: relative
+        background-color: #f7f7f7
+        transition: $transition
+        @media only screen and (max-width: 768px)
+            margin: 0 auto
+        &:hover
+            box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1)
+        &:hover .how__number
+            top: -10px
+
+
+    &__item + &__item
+        margin-left: 20px
+        @media only screen and (max-width: 768px)
+            margin: 0 auto
+    // .how__icon
+
+    &__icon
+        margin-bottom: 20px
+        font-size: 42px
+        color: #976f55
+
+    // .how__title
+
+    &__title
+        font-size: 18px
+        @include OswaldRegular
+        margin-bottom: 20px
+        text-transform: uppercase
+
+    // .how__text
+
+    &__text
+        color: #9b9b9b
+    // .how__number
+
+    &__number
+        background-color: #fff
+        padding: 10px
+        line-height: 1
+        font-size: 29px
+        @include OswaldRegular
+        position: absolute
+        right: 0
+        top: 0
+        color: $accent-color
+        transition: $transition
+
+
+

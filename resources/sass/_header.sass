@@ -1,0 +1,260 @@
+.header
+
+
+    z-index: 99
+
+    position: static
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    margin: 0 auto
+    transform: none
+    background-color: #fff
+    border-bottom: 1px solid #a5a5a5
+    .header__inner
+        border: none
+
+    &--fixed
+        position: fixed
+        width: 100%
+        top: 0
+        left: 0
+        right: 0
+        background-color: #fff
+        margin: 0 auto
+        transform: none
+        border-bottom: 1px solid #a5a5a5
+        -webkit-box-shadow: 0px 15px 44px 0px rgba(0,0,0,0.1)
+        -moz-box-shadow: 0px 15px 44px 0px rgba(0,0,0,0.1)
+        box-shadow: 0px 15px 44px 0px rgba(0,0,0,0.1)
+        .header__inner
+            border: none
+        .header__top--none
+            display: flex
+
+
+    @media only screen and (max-width : 768px)
+        position: fixed
+        transform: none
+        flex-direction: column
+        top: 0
+        left: -200%
+        height: 100vh
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        background-color: #fff
+        overflow: scroll
+        padding: 50px 0
+        &--active
+            left: 0
+        .header__top--none
+            display: flex
+
+    // .header__top
+    &__top
+        width: 100%
+        padding: 5px 0
+        background-color: $backgroung-light
+        @media only screen and (max-width : 768px)
+            display: none
+        &--none
+            display: none
+
+    &__contacts
+
+        display: flex
+        justify-content: space-between
+        //padding: 15px 0
+        @media only screen and (max-width : 768px)
+            flex-direction: column
+
+    &__contacts-icon
+        display: flex
+        align-items: center
+        @media only screen and (max-width : 768px)
+            flex-direction: column
+            text-align: center
+    &__contacts-wrap + &__contacts-wrap
+        margin-left: 20px
+        @media only screen and (max-width : 768px)
+            margin-left: 0
+            margin-top: 15px
+    &__contacts-link
+        text-decoration: none
+        color: $color-fonts
+        font-weight: 700
+        transition: $transition
+        &:hover
+            color: $accent-color
+
+
+    &__btn
+        display: inline-block
+        background: none
+        cursor: pointer
+        @include OswaldRegular
+        border-radius: 0
+        padding: 8px 15px
+        text-decoration: none
+        border: 3px solid #000
+        text-transform: uppercase
+        transition: $transition
+
+        color: #000
+        @media only screen and (max-width : 768px)
+            display: none
+        &:hover
+            background-color: $accent-color
+            border-color: $accent-color
+            color: #ffffff!important
+
+    &__inner
+        //padding: 0 15px 0 15px
+        width: 100%
+        margin: 0 auto
+        background-color: #fff
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid #a5a5a5
+
+        @media only screen and (max-width : 768px)
+            border: none
+
+
+            flex-direction: column
+    // .header__logo
+    &__logo
+        display: inline-block
+        height: 46px
+        @media only screen and (max-width : 768px)
+            margin-bottom: 40px
+    &__nav
+        @media only screen and (max-width : 768px)
+
+            display: flex
+            justify-content: center
+            width: 100%
+            margin: 0 auto
+
+    &__list
+        list-style: none
+        padding: 0
+
+        margin: 0
+        @media only screen and (max-width : 768px)
+            display: flex
+            flex-direction: column
+            text-align: center
+            width: 100%
+
+    &__item
+        display: inline-block
+        position: relative
+        &--dropdown:hover .header__icon
+            opacity: 100%
+        &--dropdown:active .header__icon
+            opacity: 100%
+        &--dropdown:focus .header__icon
+            opacity: 100%
+        &--active .header__icon
+            opacity: 100%
+        @media only screen and (max-width : 768px)
+            display: flex
+            align-items: center
+            justify-content: center
+
+    &__link
+        display: flex
+        height: 80px
+        padding: 0 15px 0 15px
+        text-align: center
+        align-items: center
+        text-decoration: none
+        text-transform: uppercase
+        color: $color-fonts
+        @include OswaldBold
+        transition: $transition
+        @media only screen and (max-width : 768px)
+            width: 100%
+            height: 100%
+            padding: 15px
+            display: block
+
+        &:hover
+            color: $accent-color
+        &--active
+            background-color: $accent-color
+            color: #fff!important
+            &:hover
+                color: #fff!important
+
+    // .header__icon
+    &__icon
+        color: $accent-color
+        opacity: 0
+        position: absolute
+        bottom: 15px
+        left: 50%
+        transform: translateX(-50%)
+        transition: $transition
+        @media only screen and (max-width : 768px)
+            bottom: 5px
+    // .header__dropdown
+    &__dropdown
+        border-top: 1px solid #a1a1a1
+        max-width: 1110px
+        //max-width: 320px
+        padding: 15px 15px
+        position: absolute
+        background-color: #fff
+        list-style: none
+        display: none
+        justify-content: space-between
+        // потом заменить на space-between когда будет много строниц
+        //justify-content: space-around
+        margin: 0 auto
+        width: 100%
+
+        left: 50%
+        transform: translateX(-50%)
+
+        box-shadow: 10px 10px 20px 3px rgba(66, 66, 66, 0.4)
+        @media only screen and (max-width : 768px)
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+            justify-content: center
+            flex-direction: column
+            box-shadow: none
+            text-align: center
+            border: 1px solid rgba(51, 51, 51, 0.2)
+            //max-width: 200px
+        &--active
+            display: flex
+            z-index: 999
+    &__dropdown-item
+        display: inline-block
+
+    &__dropdown-link
+        display: inline-block
+        text-decoration: none
+        color: $color-fonts
+        @include OswaldRegular
+        text-transform: uppercase
+        padding: 45px 15px
+        transition: $transition
+        @media only screen and (max-width : 768px)
+            padding: 15px
+            width: 100%
+
+
+        &:hover
+            background-color: $accent-color
+            color: #fff
+        &--active
+            background-color: $accent-color
+            color: #fff

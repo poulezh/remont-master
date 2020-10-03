@@ -1,0 +1,98 @@
+body
+    margin: 0
+    padding: 0
+    font-size: 15px
+    color: #000000
+    line-height: 1.6
+    font-family: 'RobotoRegular', sans-serif
+*,
+*:before,
+*:after
+    box-sizing: border-box
+
+h1, h2, h3, h4, h5, h6, p
+    margin: 0
+
+button
+    cursor: pointer
+
+
+
+.container
+    width: 100%
+    max-width: 1140px
+    margin: 0 auto
+    padding: 0 15px
+
+.btn
+    display: inline-block
+    background: none
+    cursor: pointer
+    @include OswaldRegular
+    border-radius: 0
+    padding: 17px 40px
+    text-decoration: none
+    border: 3px solid #000
+    text-transform: uppercase
+    transition: $transition
+    &__accent
+        color: #000
+        &:hover
+            background-color: $accent-color
+            border-color: $accent-color
+            color: #ffffff!important
+    &__dark
+        background-color: $accent-color
+        color: #fff
+        border-color: $accent-color
+        &:hover
+            background-color: $backgroung-dark
+            border-color: $backgroung-dark
+
+
+
+.title-wrapper
+    position: relative
+    overflow: hidden
+    width: 100%
+    text-align: center
+    margin-bottom: 40px
+// .offer__title
+
+.title
+
+    position: relative
+    display: inline-block
+    padding: 0 16px
+    letter-spacing: .075em
+    font-size: 18px
+    @include OswaldBold
+    text-transform: uppercase
+    text-align: center
+    &:before
+        position: absolute
+        content: ''
+        top: calc( 50% - 2px)
+        height: 1px
+        width: 500px
+        background: #d7d7d7
+        left: -500px
+    &:after
+        position: absolute
+        content: ''
+        top: calc( 50% - 2px)
+        height: 1px
+        width: 500px
+        background: #d7d7d7
+        right: -500px
+
+.title-2
+    text-align: center
+    @include OswaldRegular
+    text-transform: uppercase
+    font-size: 36px
+    margin-bottom: 40px
+
+.center
+    text-align: center
+    margin-bottom: 40px!important
